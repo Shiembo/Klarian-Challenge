@@ -31,7 +31,7 @@ cd MySuperDataCompany
     Navigate to the upload page to upload JSON or CSV files. This page is accessible at:
 
 
-    ttp://localhost:8000/upload/
+    ttp://localhost:8000/data/upload/
 
 5) Step 5: Query Data
 

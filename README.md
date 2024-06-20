@@ -96,7 +96,7 @@ cd MySuperDataCompany
 
 
  Then rerun your docker:
- 
+
 
  docker-compose build
  docker-compose up
@@ -108,3 +108,22 @@ cd MySuperDataCompany
 2) Remove Docker Volumes: docker-compose down -v (useful for resetting the database)
 3) Rebuild Docker Images: docker-compose up --build
 
+## Inputs for CSV file
+
+type,amount,date
+invoice,100,2024-06-19
+receipt,50,2024-06-18
+
+## inputs for json file
+[
+    {
+        "type": "invoice",
+        "amount": 100,
+        "date": "2024-06-19"
+    },
+    {
+        "type": "receipt",
+        "amount": 50,
+        "date": "2024-06-18"
+    }
+]

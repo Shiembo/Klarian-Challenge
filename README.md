@@ -1,4 +1,4 @@
-Carlton Shiembo
+
 
 
 ## MySuperDataCompany
@@ -132,4 +132,3 @@ receipt,50,2024-06-18
 ]
 
 
-Carlton Shiembo

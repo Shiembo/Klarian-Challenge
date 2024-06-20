@@ -31,7 +31,7 @@ cd MySuperDataCompany
     Navigate to the upload page to upload JSON or CSV files. This page is accessible at:
 
 
-    ttp://localhost:8000/data/upload/
+    http://localhost:8000/data/upload/
 
 5) Step 5: Query Data
 
@@ -43,6 +43,15 @@ cd MySuperDataCompany
    You can filter data by type using the query parameter type. For example:
 
    http://localhost:8000/data/query/?type=invoice
+
+6) step 6: createsuper user
+   In docker, enter the web 1 running container and type the command:
+
+   Python manage.py createsuperuser
+
+   Input the username, email and passowrd. After that you can log into the django admin site to view and manage the tables created using the url below: 
+
+   http://localhost:8000/admin
 
 ## Directory Structure
 
@@ -63,6 +72,35 @@ cd MySuperDataCompany
 1) Database Connection Error: Ensure that the db service is running and the database credentials in settings.py match those defined in docker-compose.yml.
 
 2) File Upload Issues: Ensure that the uploaded files are in the correct JSON or CSV format.
+3) If you run your docker and you get an error saying "could not access entrypoint.sh file" then change the CRLF on your vscode to LF and try running your docker again.
+ 
+
+
+
+ docker-compose down -v
+ docker-compose build
+ docker-compose up
+
+
+4) If you run your docker and get this error: 
+
+"could not open directory "pg_notify": No such file or directory" 
+
+ This indicates that there is a problem with the PostgreSQL data directory.
+
+ Just simply run the following commands:
+
+
+ docker-compose down -v
+ Remove-Item -Recurse -Force .\postgres_data
+
+
+ Then rerun your docker:
+ 
+
+ docker-compose build
+ docker-compose up
+
 
 
 ## Useful Commands
